@@ -1,5 +1,8 @@
 # Automations
 
+## Folders
+- ccdc-scripts: This is a submodule that contains resources for the CCDC competition 
+
 ## Windows Server
 - [Microsoft Window Server Hardening Script v1.1](https://gallery.technet.microsoft.com/scriptcenter/Windows-Server-Hardening-8f9f23df)
 
