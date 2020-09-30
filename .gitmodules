@@ -1,0 +1,3 @@
+[submodule "automations/scap-security-policies"]
+	path = automations/scap-security-policies
+	url = https://github.com/0day-xc-Our/2020-Security-Guide
