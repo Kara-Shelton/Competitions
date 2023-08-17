@@ -2,7 +2,7 @@
 	path = automations/scap-security-policies
 	url = https://github.com/0day-xc-Our/2020-Security-Guide
 [submodule "environment/secgen"]
-	path = environment/secgen
+	path = archive/environment/secgen
 	url = https://github.com/cliffe/SecGen/
 [submodule "automations/ccdc-scripts"]
 	path = automations/ccdc-scripts
