@@ -7,12 +7,17 @@ Some tools you may want to have installed on your system before working on labs 
 - [git-lfs](https://git-lfs.com/)
 
 ## Additional Resources
-- [vulhub](https://github.com/vulhub/vulhub)
+
+### Current (And Past) CTFs
 - [CTF Time](https://ctftime.org/)
-- [CTF List](https://captf.com/practice-ctf/)
-- [Password Cracking -- Hob0Rules](https://github.com/praetorian-inc/Hob0Rules)
-- [Crackstation](https://crackstation.net/)
-- [CyberChief](https://gchq.github.io/CyberChef/)
+
+### Practice
+- [vulhub](https://github.com/vulhub/vulhub)
+
+### Helpful Links
 - [Trail of Bits: Comprehensive CTF Guide](https://trailofbits.github.io/ctf/)
+- [Password Cracking -- Hob0Rules](https://github.com/praetorian-inc/Hob0Rules)
+- [CyberChief](https://gchq.github.io/CyberChef/)
+- [Crackstation](https://crackstation.net/)
 
 Please checkout the [CONTRIBUTING.md](CONTRIBUTING.md) before trying to add to this repo.
