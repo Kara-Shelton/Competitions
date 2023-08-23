@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  splunk:
+    image: splunk/splunk:latest
+    environment:
+      SPLUNK_START_ARGS: --accept-license
+      SPLUNK_PASSWORD: <YourPassword>
+      SPLUNK_USER: <YourUsername>
+    ports:
+      - "8000:8000"
+      - "8088:8088"
+      - "1514:1514"  # TCP port for receiving logs
+    networks:
+      - mynetwork
+    volumes:
+      - splunk-data:/opt/splunk/etc
+      - splunk-logs:/opt/splunk/var/log
+
+  metasploitable:
+    image: vulnerables/web-dvwa:latest
+    ports:
+      - "80:80"
+    networks:
+      - mynetwork
+    # Additional configuration to forward logs to Splunk
+
+  kali:
+    image: kalilinux/kali-rolling
+    ports:
+      - "22:22"
+    networks:
+      - mynetwork
+    # Additional configuration to forward logs to Splunk
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  splunk-data:
+  splunk-logs:
