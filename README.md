@@ -12,6 +12,7 @@ environment -- Build scripts for practice environments
 ### CTF Life
 - [CTF Time](https://ctftime.org/)
 - [CTF List](https://captf.com/practice-ctf/)
+- [Over the Wire - Linux Training](https://overthewire.org/wargames/)
 
 ### Password Cracking
 - [Password Cracking -- Hob0Rules](https://github.com/praetorian-inc/Hob0Rules)
