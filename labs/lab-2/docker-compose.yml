@@ -5,8 +5,8 @@ services:
     image: splunk/splunk:latest
     environment:
       SPLUNK_START_ARGS: --accept-license
-      SPLUNK_PASSWORD: <YourPassword>
-      SPLUNK_USER: <YourUsername>
+      SPLUNK_PASSWORD: "${SPLUNK_PASS}"
+      SPLUNK_USER: "${SPLUNK_USER}"
     ports:
       - "8000:8000"
       - "8088:8088"
