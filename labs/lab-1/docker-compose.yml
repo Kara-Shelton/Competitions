@@ -7,14 +7,14 @@ services:
      - SPLUNK_START_ARGS=--accept-license
      - SPLUNK_PASSWORD=${SPLUNK_PASS}
        # Unless file is provided, you will need to get from splunkbase
-     - SPLUNK_APPS_URL=/tmp/splunk-security-essentials_371.tgz
+     - SPLUNK_APPS_URL=/tmp/splunk.tgz
     ports:
       - "8000:8000"
       - "8088:8088"
     volumes:
       - splunk-data:/opt/splunk/etc
       - splunk-logs:/opt/splunk/var/log
-      - ./splunk-security-essentials_371.tgz:/tmp/splunk-security-essentials_371.tgz
+      - ./splunk.tgz:/tmp/splunk.tgz
 
 volumes:
   splunk-data:
