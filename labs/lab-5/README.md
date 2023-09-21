@@ -2,11 +2,7 @@
 
 ## Getting Started
 ```
-docker-compose up -d
-```
-Then connect to the grasshopper container
-```
-docker-compose exec -it grasshopper bash
+docker-compose run --rm --entrypoint /bin/bash grasshopper
 ```
 
 ## Lab
@@ -19,9 +15,8 @@ For this lab will be introducing angr and how it can be leveraged for binary ana
 3. Use angr to overflow the buf into the count to display WIN. 
 
 
-
 ## References
-- [grasshopper](https://github.com/49thSecurityDivision/grass)
+- [grasshopper](https://github.com/vr0n/grasshopper)
 - [angr: quickstart](https://docs.angr.io/en/latest/quickstart.html)
 
 *Idea for lab derived from [io.netgarage.org](https://io.netgarage.org)*

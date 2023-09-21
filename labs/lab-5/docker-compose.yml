@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  grasshopper:
+    image: ghcr.io/49thsecuritydivision/grasshopper:master
+    volumes:
+      - ./artifacts:/root/artifacts
+    entrypoint: /bin/bash
