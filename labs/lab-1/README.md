@@ -8,9 +8,19 @@ docker-compose up
 ```
 
 ## Lab
-1. Get the container up and running
-2. Ingest the logs in the logs directory. For starters, injest the windows-powershell.txt log file and search for a flag in the logs, formatted at LAB{SOME FLAG CONTENT}
-3. Find the threat within the logs. Splunk has powerful search capabilities, see if you can find automated attacks in the logs.
+1. Get the container up and running. *This can be accomplished with the command provided in [Getting Started][#getting-started]* 
+    - *To access the newly created container, navigate to http://localhost:8000 in your browser*
+    - *The password is defined in the .env file and the user is admin*
+2. Ingest the logs in the logs directory. 
+    - We will begin with injesting the windows-powershell.txt log file.
+    - *When not capturing live data, splunk allows users to use the "Add Data" function to insert their own log files manually*
+3. After the file is injested, try to find the planted/hidden/added flag in the log file. It is formatted at LAB{SOME FLAG CONTENT}.
+    - *The flag may be base64 encoded*
+    - *The flag is being printed in powershell*
+    - *If you need additional help finding the flag, you can leverage git to see if there has been any changes made in that file*
+4. Splunk is a powerful tool that is able to detect cyber attacks when feed logs. 
+    - Find the different threats within the log file and identify the host(s) in question
+    - *Splunk should be able to identify the threats*
 
 *For Additional practice, logs can be found in the attack_data repo*
 

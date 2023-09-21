@@ -1,18 +1,20 @@
-version: '3'
+version: '3.7'
 
 services:
   splunk:
     image: splunk/splunk:latest
     environment:
-      SPLUNK_START_ARGS: --accept-license
-      SPLUNK_PASSWORD: "${SPLUNK_PASS}"
-      SPLUNK_USER: "${SPLUNK_USER}"
+     - SPLUNK_START_ARGS=--accept-license
+     - SPLUNK_PASSWORD=${SPLUNK_PASS}
+       # Unless file is provided, you will need to get from splunkbase
+     - SPLUNK_APPS_URL=/tmp/splunk-security-essentials_371.tgz
     ports:
       - "8000:8000"
       - "8088:8088"
     volumes:
       - splunk-data:/opt/splunk/etc
       - splunk-logs:/opt/splunk/var/log
+      - ./splunk-security-essentials_371.tgz:/tmp/splunk-security-essentials_371.tgz
 
 volumes:
   splunk-data:
