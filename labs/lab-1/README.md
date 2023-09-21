@@ -1,5 +1,5 @@
 # Log Analysis
-The goal o this lab is familiarize students with log aggregation utilities and how to find threats in captured logs. 
+The goal of this lab is familiarize students with log aggregation utilities and how to find threats in captured logs. 
 
 ## Getting Started
 To start the lab environment, simply run the following command:
