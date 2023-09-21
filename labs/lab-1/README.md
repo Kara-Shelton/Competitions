@@ -1,11 +1,16 @@
 # Log Analysis
-The goal o this lab is familiarize students with log aggregation utilities and how to find threats in captured logs. 
+The goal of this lab is familiarize students with log aggregation utilities and how to find threats in captured logs. 
 
 ## Getting Started
-To start the lab environment, simply run the following command:
+If you have not setup your environment with docker please check out the SETUP.md in the top-level folder. Then clone the repo if you have not already.
+```
+git clone https://github.com/49thSecurityDivision/Competitions
+```
+After start the lab environment, simply run the following command:
 ```
 docker-compose up
 ```
+At this point, you are ready to proceed through the lab.
 
 ## Lab
 1. Get the container up and running. *This can be accomplished with the command provided in [Getting Started][#getting-started]* 
