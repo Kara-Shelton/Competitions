@@ -2,7 +2,7 @@
 The goal of this lab is to familiarize students with log aggregation utilities and how to find threats in captured logs.  
 
 ## Getting Started
-If you have not set up your environment with docker please check out the SETUP.md in the top-level folder. Then clone the repo if you have not already.
+If you have not set up your environment with docker please check out this [SETUP.md](https://github.com/49thSecurityDivision/Competitions/blob/master/SETUP.md). Then clone the repo if you have not already.
 ```
 git clone https://github.com/49thSecurityDivision/Competitions
 ```

@@ -1,10 +1,29 @@
 # Setup
+- [Getting Started](#getting-started)
+- [Docker Setup](#docker-setup)
+- [Useful Programs](#useful-programs)
+- [Next Steps](#next-steps)
 
 ## Getting Started
-We recommend setting up a virtual machine if you are using the windows operating system. [lubuntu](https://lubuntu.me) is a good, lightweight target.
+We recommend setting up a virtual machine if you are using the windows operating system. [lubuntu](https://lubuntu.me/downloads/) is a good, lightweight target.
 
-### Lubuntu VM
+To set up a Lubuntu VM, you can use a virtualization software such as VirtualBox or VMware. Once you have installed the virtualization software, you can create the VM using this guide for [vmware](https://kb.vmware.com/s/article/1018415)/[virtualbox](https://www.nakivo.com/blog/use-virtualbox-quick-overview/). 
 
-### Docker Setup 
+## Docker Setup 
+Then following the [docker-engine](https://docs.docker.com/engine/install/) setup linked. After it is installed. You will need to make sure that your user is added to the docker group and that the service is started.
+```
+sudo usermod -aG docker $USER
+sudo systemctl enable --now docker
+
+```
+
+After log out and back in. At this point you are ready to get started with the labs
+
+## Useful Programs
+Some useful programs can be installed as such. 
+```
+sudo apt install -y vim git docker-compose
+```
 
 ## Next Steps
+Check out the labs in the labs/ directory. You can also find dotfiles from club members linked [here](https://github.com/49thSecurityDivision/configs)
