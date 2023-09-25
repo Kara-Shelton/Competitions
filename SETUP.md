@@ -14,7 +14,6 @@ Then following the [docker-engine](https://docs.docker.com/engine/install/) setu
 ```
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
-
 ```
 
 After log out and back in. At this point you are ready to get started with the labs
@@ -26,4 +25,4 @@ sudo apt install -y vim git docker-compose
 ```
 
 ## Next Steps
-Check out the labs in the labs/ directory. You can also find dotfiles from club members linked [here](https://github.com/49thSecurityDivision/configs)
+Check out the labs in the [labs/](https://github.com/49thSecurityDivision/Competitions/tree/master/labs) directory. You can also find dotfiles from club members linked [here](https://github.com/49thSecurityDivision/configs)
