@@ -10,16 +10,17 @@ We recommend setting up a virtual machine if you are using the windows operating
 To set up a Lubuntu VM, you can use a virtualization software such as VirtualBox or VMware. Once you have installed the virtualization software, you can create the VM using this guide for [vmware](https://kb.vmware.com/s/article/1018415)/[virtualbox](https://www.nakivo.com/blog/use-virtualbox-quick-overview/). 
 
 ## Docker Setup 
-Then following the [docker-engine](https://docs.docker.com/engine/install/) setup linked. After it is installed. You will need to make sure that your user is added to the docker group and that the service is started.
+If you installed a virtual machine, you will continue to install docker using the following [docker-engine](https://docs.docker.com/engine/install/) guide. If you are on MacOS and Windows and are feeling dangerous, you can install [docker desktop](https://www.docker.com/products/docker-desktop/). 
+
+On linux, you will need to make sure that your user is added to the docker group and that the service is started.
 ```
 sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
 ```
-
-After log out and back in. At this point you are ready to get started with the labs
+After adding you user to the docker group, log out and back in. At this point you are ready to get started with the labs
 
 ## Useful Programs
-Some useful programs can be installed as such. 
+Some useful programs can be installed as such.
 ```
 sudo apt install -y vim git docker-compose
 ```
