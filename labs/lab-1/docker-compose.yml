@@ -2,6 +2,7 @@ version: '3.7'
 
 services:
   splunk:
+    platform: linux/x86_64
     image: splunk/splunk:latest
     environment:
      - SPLUNK_START_ARGS=--accept-license

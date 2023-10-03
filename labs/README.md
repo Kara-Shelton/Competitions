@@ -5,6 +5,8 @@ Each of these labs leverage docker. Using a virtual environment to the contains 
 - [docker](https://docs.docker.com/get-docker/)
 - [docker-compose](https://docs.docker.com/compose/install/)
 
+*For larger and more intricate labs, check out [DockerSecurityPlayground](https://github.com/DockerSecurityPlayground/DSP)*
+
 ## Lab Overview
 ### Defensive Labs
 - Lab-1 : Setting up log analysis
@@ -13,8 +15,10 @@ Each of these labs leverage docker. Using a virtual environment to the contains 
 - Lab-4 : Leveraging tools for scanning 
 
 ### Offensive Labs
-- Lab-5 : Binary Analysis aka introduction to [angr](https://angr.io/)
-- Lab-6 : Mobile application analysis
+- Lab-5 : Intro to RE
+- Lab-6 : Intro to Debugging
+- Lab-7 : Binary Analysis aka introduction to [angr](https://angr.io/)
+- Lab-8 : Mobile application analysis
 
 ## Images
 - [Kali](https://www.kali.org/get-kali/#kali-platforms)
