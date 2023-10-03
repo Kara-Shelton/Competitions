@@ -18,9 +18,11 @@ services:
       - splunk-logs:/opt/splunk/var/log
 
   metasploitable:
-    image: vulnerables/web-dvwa:latest
+    image: tleemcjr/metasploitable2:latest
     ports:
+      - "22:22"
       - "80:80"
+      - "443:443"
     networks:
       - mynetwork
     # Additional configuration to forward logs to Splunk

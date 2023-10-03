@@ -1,10 +1,8 @@
-# Scripting
+# Tool Introduction
 
 ## Lab
-1. Revisit metaploitable container
-2. Explore methods of automating patch process of container
+1. leverages containers to get comfortable with tools
 
 ## Resources
-- [Ansible Hardening](https://github.com/dev-sec/ansible-collection-hardening)
-- [DoD Cyber Exchange Hardening Scripts](https://public.cyber.mil/stigs/supplemental-automation-content/)
-- [RHEL8 Lockdown](https://github.com/rediculum/RHEL8_Lockdown)
+- [rustscan](https://securitytrails.com/blog/rustscan-enhancer-tool)
+- [DVWA Youtube](https://www.youtube.com/watch?v=SWzxoK6DAE4)
