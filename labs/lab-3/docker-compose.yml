@@ -68,6 +68,8 @@ services:
       - "22:22"
     networks:
       - mynetwork
+    tty: true
+
 
 networks:
   mynetwork:
