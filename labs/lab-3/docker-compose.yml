@@ -1,14 +1,6 @@
 version: '3'
 
 services:
-  metasploitable:
-    image: vulnerables/web-dvwa:latest
-    ports:
-      - "8081:80"
-    networks:
-      mynetwork:
-        ipv4_address: 172.16.1.100
-
   redis:
     image: redis:5.0.9-alpine
     networks:
