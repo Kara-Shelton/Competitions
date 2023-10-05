@@ -10,7 +10,8 @@ Each of these labs leverage docker. Using a virtual environment to the contains 
 ## Lab Overview
 ### Defensive Labs
 - Lab-1 : Setting up log analysis
-- Lab-2 : Using Kali/Introduction to metasploitable
+- Lab-2 : Web Application Vulnerbilties
+- Lab-3 : Scanning and Metasploit introduction
 - Lab-3 : Automated patching (leveraging metasploitable)
 - Lab-4 : Leveraging tools for scanning 
 
