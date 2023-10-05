@@ -12,8 +12,7 @@ Each of these labs leverage docker. Using a virtual environment to the contains 
 - Lab-1 : Setting up log analysis
 - Lab-2 : Web Application Vulnerbilties
 - Lab-3 : Scanning and Metasploit introduction
-- Lab-3 : Automated patching (leveraging metasploitable)
-- Lab-4 : Leveraging tools for scanning 
+- Lab-4 : Automated patching (leveraging metasploitable)
 
 ### Offensive Labs
 - Lab-5 : Intro to RE
