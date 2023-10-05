@@ -22,7 +22,7 @@ After adding you user to the docker group, log out and back in. At this point yo
 ## Useful Programs
 Some useful programs can be installed as such.
 ```
-sudo apt install -y vim git docker-compose
+sudo apt install -y vim git docker-compose git-lfs 
 ```
 
 ## Next Steps

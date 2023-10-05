@@ -1,5 +1,14 @@
 # Tool Introduction
 
+## Setup
+This lab requires the initialization of docker swarm mode.
+
+1. Intialization docker swarm mode
+```
+docker swarm init --advertise-addr 127.0.0.1
+```
+
+
 ## Lab
 For this lab, we will learn about tools that can leveraged for scanning containers to find entry points, open ports and vulnerabilities.
 

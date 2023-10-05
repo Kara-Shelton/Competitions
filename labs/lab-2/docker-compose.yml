@@ -1,41 +1,42 @@
 version: '3.7'
 
 services:
-  splunk:
-    image: splunk/splunk:latest
+  dvwa:
+    image: ghcr.io/digininja/dvwa:latest
+    pull_policy: always
     environment:
-      SPLUNK_START_ARGS: --accept-license
-      SPLUNK_PASSWORD: "${SPLUNK_PASS}"
-      SPLUNK_USER: "${SPLUNK_USER}"
+      - DB_SERVER=db
+    depends_on:
+      - db
+    networks:
+      - dvwa
     ports:
-      - "8000:8000"
-      - "8088:8088"
-      - "1514:1514"  # TCP port for receiving logs
-    networks:
-      - mynetwork
-    volumes:
-      - splunk-data:/opt/splunk/etc
-      - splunk-logs:/opt/splunk/var/log
+      - 4280:80
+    restart: unless-stopped
 
-  metasploitable:
-    image: tleemcjr/metasploitable2:latest
-    tty: true
+  db:
+    image: docker.io/library/mariadb:10
+    environment:
+      - MYSQL_ROOT_PASSWORD=dvwa
+      - MYSQL_DATABASE=dvwa
+      - MYSQL_USER=dvwa
+      - MYSQL_PASSWORD=p@ssw0rd
+    volumes:
+      - dvwa:/var/lib/mysql
     networks:
-      - mynetwork
-    # Additional configuration to forward logs to Splunk
+      - dvwa
+    restart: unless-stopped
 
   kali:
     image: kalilinux/kali-rolling
     ports:
-      - "22:22"
+      - "2222:22"
     networks:
-      - mynetwork
-    # Additional configuration to forward logs to Splunk
+      - dvwa
+    tty: true
 
 networks:
-  mynetwork:
-    driver: bridge
+  dvwa:
 
 volumes:
-  splunk-data:
-  splunk-logs:
+  dvwa:
