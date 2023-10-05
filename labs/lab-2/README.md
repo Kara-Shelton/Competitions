@@ -26,9 +26,8 @@ docker-compose run --entrypoint /bin/bash kali
 apt update && apt -y install kali-linux-headless
 ```
 
-2. The website is now reachable from your local browser at http://127.0.0.1:4230
-   * At this point, it would be a good practice to check out the [owasp top 10](https://owasp.org/www-project-top-t
-en/)
+2. The website is now reachable from your local browser at http://127.0.0.1:4280
+   * At this point, it would be a good practice to check out the [owasp top 10](https://owasp.org/www-project-top-ten/)
    * burp suite and owasp zap are useful tools for conducting this experiment but will not be necessary to discover
 all vulnerabilities
 
