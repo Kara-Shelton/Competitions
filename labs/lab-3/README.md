@@ -9,14 +9,14 @@ docker-compose up -d
 
 2. Enter the Kali Linux container:
 ```
-docker-compose run --entrypoint /bin/bash kali
+docker-compose run --entrypoint /bin/bash hack
 ```
 
 3. Use the following tools to scan the containers for entry points, open ports, and vulnerabilities:
     - rustscan
     - searchsploit
 
-4. Leverage the knowledge gained from the previous step to access the container running the vulnerable version of a services
+4. Leverage the knowledge gained from the previous step to access the container running the vulnerable version of a serviceds
 
 ## Resources
 - [rustscan](https://securitytrails.com/blog/rustscan-enhancer-tool)

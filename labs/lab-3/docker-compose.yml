@@ -54,12 +54,8 @@ services:
       mynetwork:
         ipv4_address: 172.16.1.10
 
-  kali:
-    image: kalilinux/kali-rolling
-    command:
-      sh -c "apt update && apt -y install kali-linux-headless"
-    ports:
-      - "2222:22"
+  hack:
+    image: ghcr.io/vr0n/grasshopper:v1.2
     networks:
       - mynetwork
     tty: true
