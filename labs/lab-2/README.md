@@ -15,14 +15,14 @@ ication and session management systems to gain unauthorized access to web applic
 ## Lab
 1. Start [DVWA](https://github.com/digininja/DVWA) container with the following command.
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 **Note**
 There is a kali image included in this environment. You can enter that container and install the needed tools with t
 he following commands:
 ```
-docker-compose run --entrypoint /bin/bash kali
+docker compose run --entrypoint /bin/bash kali
 apt update && apt -y install kali-linux-headless
 ```
 

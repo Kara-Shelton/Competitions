@@ -8,7 +8,7 @@ git clone https://github.com/49thSecurityDivision/Competitions
 ```
 After start the lab environment, simply run the following command:
 ```
-docker-compose up
+docker compose up -d
 ```
 At this point, you are ready to proceed through the lab.
 

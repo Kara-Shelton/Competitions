@@ -5,12 +5,12 @@ This lab will introduce students to tools that can be used to scan containers fo
 1. Start the lab environment with docker-compose. This will daemonize the docker environment. When you are done, you can run docker
 -compose down to free the resources.  
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 2. Enter the Kali Linux container:
 ```
-docker-compose run --entrypoint /bin/bash hack
+docker compose run --entrypoint /bin/bash hack
 ```
 
 3. Use the following tools to scan the containers for entry points, open ports, and vulnerabilities:
