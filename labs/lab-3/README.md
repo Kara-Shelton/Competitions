@@ -28,6 +28,5 @@ can add, but this will be a good starting point.
 ## Resources
 - [rustscan](https://securitytrails.com/blog/rustscan-enhancer-tool)
 - [searchsploit how to](https://medium.com/@heynik/how-to-search-the-exploit-by-terminal-using-searchsploit-in-kali-linux-7a90193b3)
-ddf)
 - [metasploit in kali](https://www.kali.org/docs/tools/starting-metasploit-framework-in-kali/)
 
