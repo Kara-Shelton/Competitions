@@ -5,6 +5,7 @@ services:
     image: tleemcjr/metasploitable2:latest
     networks:
       - mynetwork
+    tty: true
 
   hack:
     image: ghcr.io/vr0n/grasshopper:v1.2
