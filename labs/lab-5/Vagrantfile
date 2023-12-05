@@ -4,13 +4,13 @@
 Vagrant.configure("2") do |config|
 
   config.vm.define "ubuntu_vm" do |ubuntu|
-    config.vm.box = "ubuntu/bionic64"
-    config.vm.boot_timeout = 120
+    config.vm.box = "ubuntu/focal64"
+    config.vm.boot_timeout = 360
 
     config.vm.provision "shell", inline: <<-SHELL
       # Update and Install Services
       apt-get update
-      apt-get install -y apache2 mysql-server redis-server mongodb nginx ftp vsftpd telnetd rsh-server postfix
+      apt-get install -y apache2 mysql-server redis-server mongodb nginx ftp vsftpd telnetd rsh-server postfix lxde
 
       # 1. Apache2: Enable directory listing and put server version on pages
       a2dismod -f autoindex
@@ -49,6 +49,11 @@ Vagrant.configure("2") do |config|
 
       # Restart all services to apply changes
       systemctl restart apache2 mysql redis-server mongod nginx vsftpd telnetd rsh-server postfix
+      # Create a new user
+      useradd -m -s /bin/bash -G sudo labuser
+
+      # Set the password
+      echo 'labuser:strongpassword' | chpasswd
     SHELL
   end
 
@@ -83,6 +88,12 @@ Vagrant.configure("2") do |config|
       # Restart services to apply changes
       Restart-Service -Name W3SVC
       Restart-Service -Name FTPsvc
+      # Create a new admin user
+      $password = ConvertTo-SecureString 'strongpassword' -AsPlainText -Force
+      New-LocalUser "labuser" -Password $password -FullName "Lab Admin" -Description "Admin User"
+
+      # Add the user to the Administrators group
+      Add-LocalGroupMember -Group "Administrators" -Member "labuser"
     POWERSHELL
   end
 end

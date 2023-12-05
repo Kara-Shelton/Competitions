@@ -5,7 +5,7 @@
 - [Next Steps](#next-steps)
 
 ## Getting Started
-We recommend setting up a virtual machine if you are using the windows operating system. [lubuntu](https://lubuntu.me/downloads/) is a good, lightweight target.
+We recommend setting up a virtual machine if you are using the windows operating system. [lubuntu](https://lubuntu.me/downloads/) is a good, lightweight target. Downloading and installing virtualbox will also be helpful but you can use any hypervisor and UI. Vmware Player/Fusion/Workstation, UTM, Gnome Boxes,  and KVM/Virt-Manager are both good alternatives to Virtualbox depending on the OS you are running.
 
 To set up a Lubuntu VM, you can use a virtualization software such as VirtualBox or VMware. Once you have installed the virtualization software, you can create the VM using this guide for [vmware](https://kb.vmware.com/s/article/1018415)/[virtualbox](https://www.nakivo.com/blog/use-virtualbox-quick-overview/). 
 
