@@ -5,6 +5,8 @@ This repo contains competitions resources and helpful information to add in trai
 Some tools you may want to have installed on your system before working on labs include the following:
 - [docker](https://www.docker.com/products/docker-desktop/)
 - [git-lfs](https://git-lfs.com/)
+- [virtualbox](https://www.virtualbox.org/wiki/Downloads)
+- [vagrant](https://www.vagrantup.com/)
 
 ## Additional Resources
 
