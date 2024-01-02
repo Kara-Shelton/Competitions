@@ -3,6 +3,11 @@
 
 Vagrant.configure("2") do |config|
 
+  config.vm.define "kali_vm" do |kali|
+    config.vm.box = "kalilinux/rolling"
+    config.vm.boot_timeout = 360
+  end 
+
   config.vm.define "ubuntu_vm" do |ubuntu|
     config.vm.box = "ubuntu/focal64"
     config.vm.boot_timeout = 360
@@ -58,7 +63,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "windows_server" do |windows|
-    windows.vm.box = "gusztavvargadr/windows-server"
+    config.vm.box = "gusztavvargadr/windows-server"
     windows.vm.box_version = "2102.0.2310"
 
     # Forwarding ports for services
