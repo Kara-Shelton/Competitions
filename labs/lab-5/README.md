@@ -2,11 +2,26 @@
 
 This lab will familiarize students with Linux and Windows firewalls. Unlike the past labs, we will use vagrant to create virtual machines to provide a real service environment. The goal is for students to learn how to create firewall rules using iptables/UFW on a Linux server, and Windows Defender Firewall on the Windows server. A successfully completed lab will block all traffic except from the other “safe” machines, essentially preventing communications from the “attacker” VM.
 
+The credentials for the kali vm
+
+```
+vagrant : vagrant 
+```
+
 ## Getting Started
 
 - To get started, begin by installing [vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads). These two tools will be used in this lab.
 - Start the build process for the lab with the following command. 
-    *If you experience problems will the build script, you can use these links to download the machines manually [linux-server](), [windows-server]().*
+    *If you experience problems will the build script, you can use these links to download the machines manually [linux-server](), [windows-server](). You will need to provide the attack vm yourself*
+    
+    If you are using a linux machine, you may need to run the following:
+    ```
+    vagrant plugin install winrm
+    vagrant plugin install winrm-fs
+    vagrant plugin install winrm-elevated
+    ```
+
+    To launch the environment, run:
     ```
     vagrant up
     ```
