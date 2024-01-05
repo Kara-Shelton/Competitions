@@ -48,3 +48,4 @@ vagrant : vagrant
 - [Windows firewalls documentation](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/configure)
 - [iptables guide](https://phoenixnap.com/kb/iptables-tutorial-linux-firewall)
 - [UFW guide](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+- [Vagrant Mail](https://github.com/rgl/mail-vagrant/tree/master)
