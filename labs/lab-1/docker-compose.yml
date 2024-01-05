@@ -3,7 +3,8 @@ version: '3.7'
 services:
   splunk:
     platform: linux/x86_64
-    image: splunk/splunk:latest
+    # image: splunk/splunk:latest
+    build: ./
     environment:
      - SPLUNK_START_ARGS=--accept-license
      - SPLUNK_PASSWORD=${SPLUNK_PASS}
@@ -15,7 +16,6 @@ services:
     volumes:
       - splunk-data:/opt/splunk/etc
       - splunk-logs:/opt/splunk/var/log
-      - ./splunk.tgz:/tmp/splunk.tgz
 
 volumes:
   splunk-data:
