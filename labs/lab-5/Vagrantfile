@@ -84,10 +84,10 @@ Vagrant.configure("2") do |config|
 
       # Create a new admin user
       $password = ConvertTo-SecureString 'strongpassword' -AsPlainText -Force
-      New-LocalUser -Name "LabUser" -Password $password -FullName "Lab Admin" -Description "Admin User"
+      New-LocalUser -Name "LabUser" -nopassword -FullName "Lab Admin" -Description "Admin User"
 
       # Add the user to the Administrators group
-      Add-LocalGroupMember -Group "Administrators" -Member "labuser"
+      Add-LocalGroupMember -Group "Administrators" -Member "LabUser"
     POWERSHELL
   end
 end

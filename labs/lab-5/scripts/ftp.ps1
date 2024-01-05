@@ -1,14 +1,16 @@
 # Install FTP Server
 # Install the Windows feature for FTP
 Install-WindowsFeature Web-FTP-Server -IncludeAllSubFeature
-Install-WindowsFeature Web-Server -IncludeAllSubFeature  IncludeManagementTools
+Install-WindowsFeature Web-Server -IncludeAllSubFeature -IncludeManagementTools
 
 # Set up FTP Site
 Import-Module WebAdministration
 $FTPSiteName = "FTP Site"
-$FTPRootDir = 'D:\FTPRoot'
+$FTPRootDir = 'C:\FTPRoot'
 $FTPPort = 21
 New-WebFtpSite -Name $FTPSiteName -Port $FTPPort -PhysicalPath $FTPRootDir
+
+net accounts /minpwlen:0
 
 # Allow anonymous access
 Set-WebConfigurationProperty -pspath "IIS:\Sites\$FTPSiteName" -filter "system.ftpServer/security/authentication/anonymousAuthentication" -name "enabled" -value "True"
@@ -23,7 +25,7 @@ $FTPUserGroup.SetInfo()
 
 # create user account
 $FTPUserName = "hacker"
-$FTPPassword = 'easypass'
+$FTPPassword = "easypass"
 $CreateUserFTPUser = $ADSI.Create("User", "$FTPUserName")
 $CreateUserFTPUser.SetInfo()
 $CreateUserFTPUser.SetPassword("$FTPPassword")
@@ -91,9 +93,3 @@ reg add "HKLM\System\CurrentControlSet\Services\SecurityHealthService" /v "Start
 reg delete "HKLM\Software\Policies\Microsoft\Windows Defender" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender" /v "DisableAntiVirus" /t REG_DWORD /d "1" /f
-
-# installation of some malware 
-SharPersist -t service -c "C:\Windows\System32\cmd.exe" -a "/c calc.exe" -n "Some Service" -m add
-
-# Create the scheduled tasks to run once at 00.00
-schtasks /create /sc ONCE /st 00:00 /tn "Device-Synchronize" /tr C:\Temp\revshell.exe
